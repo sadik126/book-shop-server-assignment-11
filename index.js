@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.send('running');
 });
 
+app.get('/', (res, req) => {
+    res.send('heroku connect')
+})
+
 app.listen(port, () => {
     console.log('crud is running')
 })
