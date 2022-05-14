@@ -60,6 +60,7 @@ async function run() {
         app.put('/products/:id', async (req, res) => {
             const id = req.params.id;
             const updatedUser = req.body;
+            console.log(updatedUser);
             const query = {
                 _id: ObjectId(id)
             }
