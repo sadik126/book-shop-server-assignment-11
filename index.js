@@ -39,10 +39,10 @@ async function run() {
             res.send(services)
         })
 
-        app.get('/products', async (req, res) => {
-            const email = req.query.email;
+        app.get('/product', async (req, res) => {
+            const email = req.query.supplier;
             console.log(email)
-            const query = { email: email }
+            const query = { supplier: email }
             const cursor = collection.find(query)
             const services = await cursor.toArray();
             res.send(services)
